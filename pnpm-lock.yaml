@@ -14,6 +14,9 @@ importers:
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.8)(react@19.1.0)
+      '@sentry/react':
+        specifier: ^9.40.0
+        version: 9.40.0(react@19.1.0)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -26,6 +29,9 @@ importers:
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@19.1.0)
+      react-router-dom:
+        specifier: ^7.7.0
+        version: 7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@eslint/js':
         specifier: ^9.30.1
@@ -571,6 +577,36 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@sentry-internal/browser-utils@9.40.0':
+    resolution: {integrity: sha512-Ajvz6jN+EEMKrOHcUv2+HlhbRUh69uXhhRoBjJw8sc61uqA2vv3QWyBSmTRoHdTnLGboT5bKEhHIkzVXb+YgEw==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/feedback@9.40.0':
+    resolution: {integrity: sha512-39UbLdGWGvSJ7bAzRnkv91cBdd6fLbdkLVVvqE2ZUfegm7+rH1mRPglmEhw4VE4mQfKZM1zWr/xus2+XPqJcYw==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/replay-canvas@9.40.0':
+    resolution: {integrity: sha512-GLoJ4R4Uipd7Vb+0LzSJA2qCyN1J6YalQIoDuOJTfYyykHvKltds5D8a/5S3Q6d8PcL/nxTn93fynauGEZt2Ow==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/replay@9.40.0':
+    resolution: {integrity: sha512-WrmCvqbLJQC45IFRVN3k0J5pU5NkdX0e9o6XxjcmDiATKk00RHnW4yajnCJ8J1cPR4918yqiJHPX5xpG08BZNA==}
+    engines: {node: '>=18'}
+
+  '@sentry/browser@9.40.0':
+    resolution: {integrity: sha512-qz/1Go817vcsbcIwgrz4/T34vi3oQ4UIqikosuaCTI9wjZvK0HyW3QmLvTbAnsE7G7h6+UZsVkpO5R16IQvQhQ==}
+    engines: {node: '>=18'}
+
+  '@sentry/core@9.40.0':
+    resolution: {integrity: sha512-cZkuz6BDna6VXSqvlWnrRsaDx4QBKq1PcfQrqhVz8ljs0M7Gcl+Mtj8dCzUxx12fkYM62hQXG72DEGNlAQpH/Q==}
+    engines: {node: '>=18'}
+
+  '@sentry/react@9.40.0':
+    resolution: {integrity: sha512-y00d33qozmQAKroQ4Kk2jxhznprPBOb55SL4LOpNPRHGEomxZCUeM3geltczrf14JsGowCr5+xlT+cZQ2XcNlA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      react: ^16.14.0 || 17.x || 18.x || 19.x
+
   '@swc/helpers@0.5.17':
     resolution: {integrity: sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==}
 
@@ -946,6 +982,10 @@ packages:
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
+
+  cookie@1.0.2:
+    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
+    engines: {node: '>=18'}
 
   cosmiconfig@7.1.0:
     resolution: {integrity: sha512-AdmX6xUzdNASswsFtmwSt7Vj8po9IuqXm0UXz7QKPuEUmPB4XyjGfaAr2PSuELMwkRMVH1EpIkX5bTZGRB3eCA==}
@@ -1342,6 +1382,23 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
+  react-router-dom@7.7.0:
+    resolution: {integrity: sha512-wwGS19VkNBkneVh9/YD0pK3IsjWxQUVMDD6drlG7eJpo1rXBtctBqDyBm/k+oKHRAm1x9XWT3JFC82QI9YOXXA==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+
+  react-router@7.7.0:
+    resolution: {integrity: sha512-3FUYSwlvB/5wRJVTL/aavqHmfUKe0+Xm9MllkYgGo9eDwNdkvwlJGjpPxono1kCycLt6AnDTgjmXvK3/B4QGuw==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+
   react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
@@ -1378,6 +1435,9 @@ packages:
     resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
     engines: {node: '>=10'}
     hasBin: true
+
+  set-cookie-parser@2.7.1:
+    resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -2024,6 +2084,41 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.45.1':
     optional: true
+
+  '@sentry-internal/browser-utils@9.40.0':
+    dependencies:
+      '@sentry/core': 9.40.0
+
+  '@sentry-internal/feedback@9.40.0':
+    dependencies:
+      '@sentry/core': 9.40.0
+
+  '@sentry-internal/replay-canvas@9.40.0':
+    dependencies:
+      '@sentry-internal/replay': 9.40.0
+      '@sentry/core': 9.40.0
+
+  '@sentry-internal/replay@9.40.0':
+    dependencies:
+      '@sentry-internal/browser-utils': 9.40.0
+      '@sentry/core': 9.40.0
+
+  '@sentry/browser@9.40.0':
+    dependencies:
+      '@sentry-internal/browser-utils': 9.40.0
+      '@sentry-internal/feedback': 9.40.0
+      '@sentry-internal/replay': 9.40.0
+      '@sentry-internal/replay-canvas': 9.40.0
+      '@sentry/core': 9.40.0
+
+  '@sentry/core@9.40.0': {}
+
+  '@sentry/react@9.40.0(react@19.1.0)':
+    dependencies:
+      '@sentry/browser': 9.40.0
+      '@sentry/core': 9.40.0
+      hoist-non-react-statics: 3.3.2
+      react: 19.1.0
 
   '@swc/helpers@0.5.17':
     dependencies:
@@ -2736,6 +2831,8 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
+  cookie@1.0.2: {}
+
   cosmiconfig@7.1.0:
     dependencies:
       '@types/parse-json': 4.0.2
@@ -3118,6 +3215,20 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
+  react-router-dom@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      react-router: 7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+
+  react-router@7.7.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      cookie: 1.0.2
+      react: 19.1.0
+      set-cookie-parser: 2.7.1
+    optionalDependencies:
+      react-dom: 19.1.0(react@19.1.0)
+
   react@19.1.0: {}
 
   resolve-from@4.0.0: {}
@@ -3165,6 +3276,8 @@ snapshots:
   semver@6.3.1: {}
 
   semver@7.7.2: {}
+
+  set-cookie-parser@2.7.1: {}
 
   shebang-command@2.0.0:
     dependencies:
