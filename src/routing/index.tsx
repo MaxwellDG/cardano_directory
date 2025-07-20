@@ -11,6 +11,9 @@ import Wallet from "../screens/contracts/wallet";
 import Law from "../screens/contracts/law";
 import Transactions from "../screens/contracts/transactions";
 import Root from "../screens";
+import Medicine from "../screens/contracts/medicine";
+import Gaming from "../screens/contracts/gaming";
+import Finance from "../screens/contracts/finance";
 
 const sentryCreateBrowserRouter =
   Sentry.wrapCreateMemoryRouterV6(createBrowserRouter);
@@ -23,6 +26,9 @@ export const Router = sentryCreateBrowserRouter(
         <Route path={ROUTES.WALLET} element={<Wallet />} />
         <Route path={ROUTES.LAW} element={<Law />} />
         <Route path={ROUTES.TRANSACTIONS} element={<Transactions />} />
+        <Route path={ROUTES.MEDICINE} element={<Medicine />} />
+        <Route path={ROUTES.GAMING} element={<Gaming />} />
+        <Route path={ROUTES.FINANCE} element={<Finance />} />
       </Route>
     </Route>
   )
