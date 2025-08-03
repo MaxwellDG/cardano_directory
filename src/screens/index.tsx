@@ -23,6 +23,7 @@ export default function Root() {
         left={0}
         right={0}
         bottom={0}
+        bgColor="whitesmoke"
         w="100vw"
         h="100vh"
       >
