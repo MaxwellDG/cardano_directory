@@ -1,26 +1,25 @@
 import { Box, Flex, ListItem, ListRoot, Text } from "@chakra-ui/react";
 import LoadingDots from "./loading-dots";
 
-enum Category {
-  TRANSACTIONS,
-  GAMING,
-  LAW,
-  MEDICINE,
-  WALLETS,
-  FINANCE,
-}
+const Category = {
+  TRANSACTIONS: "transactions",
+  GAMING: "gaming",
+  LAW: "law",
+  MEDICINE: "medicine",
+  WALLETS: "wallets",
+  FINANCE: "finance",
+} as const
 
 type Props = {
-  title: Category;
+  title: keyof typeof Category;
 };
-
-const CONTENT_MAP: Record<Category, string[]> = {
-  [Category.LAW]: ["government", "real-estate", "criminal"],
-  [Category.TRANSACTIONS]: ["government", "real-estate", "criminal"],
-  [Category.MEDICINE]: ["government", "real-estate", "criminal"],
-  [Category.GAMING]: ["government", "real-estate", "criminal"],
-  [Category.WALLETS]: ["government", "real-estate", "criminal"],
-  [Category.FINANCE]: ["government", "real-estate", "criminal"],
+const CONTENT_MAP: Record<keyof typeof Category, string[]> = {
+  LAW: ["government", "real-estate", "criminal"],
+  TRANSACTIONS: ["government", "real-estate", "criminal"],
+  MEDICINE: ["government", "real-estate", "criminal"],
+  GAMING: ["government", "real-estate", "criminal"],
+  WALLETS: ["government", "real-estate", "criminal"],
+  FINANCE: ["government", "real-estate", "criminal"],
 };
 
 export default function SummaryBox({ title }: Props) {
