@@ -3,9 +3,7 @@ import { ROUTES } from "../../routing/routes";
 export default function CardanoLogo(
   size: number,
   hideOuterRing: boolean,
-  handleClick: (
-    route: (typeof ROUTES)[keyof typeof ROUTES]
-  ) => void
+  handleClick: (route: (typeof ROUTES)[keyof typeof ROUTES]) => void
 ) {
   return (
     <svg
@@ -115,6 +113,8 @@ export default function CardanoLogo(
           ></path>
           <path
             fill="#0033AD30"
+            cursor="pointer"
+            onClick={() => handleClick(ROUTES.TRANSACTIONS)}
             d="M1599.4,1517.5c-28.6-56.7-86.7-92.5-150.3-92.5c-92.9,0-168.3,75.4-168.3,168.3    c0,92.9,75.4,168.3,168.3,168.3c26.3-0.2,52.3-6.5,75.8-18.4c56.6-28.7,92.3-86.8,92.3-150.2    C1617.3,1566.8,1611.1,1540.9,1599.4,1517.5L1599.4,1517.5L1599.4,1517.5z"
           ></path>
           <path
