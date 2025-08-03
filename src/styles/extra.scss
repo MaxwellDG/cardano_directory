@@ -1,3 +1,7 @@
+html {
+  background-color: whitesmoke;
+}
+
 .dot-typing {
   position: relative;
   left: -9999px;
@@ -32,4 +36,18 @@
   100% {
     box-shadow: 9984px 0 0 0 #D1D1D6, 9999px 0 0 0 #D1D1D6, 10014px 0 0 0 #D1D1D6;
   }
+}
+
+.cardano-logo {
+  animation: rotate 1s linear infinite;
+	animation-play-state: paused;
+	animation-delay: calc(var(--scroll) * -1s);
+	animation-iteration-count: 1;
+	animation-fill-mode: both;
+}
+
+@keyframes  rotate {
+	to {
+		transform: rotate(360deg);
+	}
 }

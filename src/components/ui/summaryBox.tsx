@@ -1,18 +1,19 @@
-import { Box, Flex, ListItem, ListRoot, Text } from "@chakra-ui/react";
+import { Box, Flex, List, Text } from "@chakra-ui/react";
 import LoadingDots from "./loading-dots";
 
-const Category = {
+export const Category = {
   TRANSACTIONS: "transactions",
   GAMING: "gaming",
   LAW: "law",
   MEDICINE: "medicine",
   WALLETS: "wallets",
   FINANCE: "finance",
-} as const
+} as const;
 
 type Props = {
-  title: keyof typeof Category;
+  category: keyof typeof Category;
 };
+
 const CONTENT_MAP: Record<keyof typeof Category, string[]> = {
   LAW: ["government", "real-estate", "criminal"],
   TRANSACTIONS: ["government", "real-estate", "criminal"],
@@ -22,21 +23,28 @@ const CONTENT_MAP: Record<keyof typeof Category, string[]> = {
   FINANCE: ["government", "real-estate", "criminal"],
 };
 
-export default function SummaryBox({ title }: Props) {
+export default function SummaryBox({ category }: Props) {
   return (
-    <Flex bgColor="white" border="2px solid black">
+    <Flex bgColor="white" border="2px solid black" flexDir="column">
       <Box p="0.5rem" borderBottom="2px solid black">
-        {!title ? <LoadingDots /> : <Text>{title}</Text>}
+        {!category ? <LoadingDots /> : <Text>{category}</Text>}
       </Box>
-      <ListRoot overflow="auto">
-        {(!title ? [] : CONTENT_MAP[title]).map((item: string) => {
+      <List.Root
+        p="0.5rem"
+        as="ul"
+        display="flex"
+        overflow="auto"
+        flexWrap={"wrap"}
+        minW="350px"
+      >
+        {(!category ? [] : CONTENT_MAP[category]).map((item: string) => {
           return (
-            <ListItem>
-              <Text>{item}</Text>
-            </ListItem>
+            <List.Item as="li" ml="1.25rem">
+              {item}
+            </List.Item>
           );
         })}
-      </ListRoot>
+      </List.Root>
     </Flex>
   );
 }
